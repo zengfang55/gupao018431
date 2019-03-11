@@ -1,0 +1,92 @@
+Classfile /E:/repository/git/gupao/com.gupao/src/main/java/design_mode/com/gupao/VolatileDemo.class
+  Last modified 2019-3-10; size 444 bytes
+  MD5 checksum 35267e547634df36455762ad9001bfc7
+  Compiled from "VolatileDemo.java"
+public class design_mode.com.gupao.VolatileDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #4.#18         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#19         // design_mode/com/gupao/VolatileDemo.vi:J
+   #3 = Class              #20            // design_mode/com/gupao/VolatileDemo
+   #4 = Class              #21            // java/lang/Object
+   #5 = Utf8               vi
+   #6 = Utf8               J
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               set
+  #12 = Utf8               (I)V
+  #13 = Utf8               get
+  #14 = Utf8               ()J
+  #15 = Utf8               getAndIncrement
+  #16 = Utf8               SourceFile
+  #17 = Utf8               VolatileDemo.java
+  #18 = NameAndType        #7:#8          // "<init>":()V
+  #19 = NameAndType        #5:#6          // vi:J
+  #20 = Utf8               design_mode/com/gupao/VolatileDemo
+  #21 = Utf8               java/lang/Object
+{
+  volatile long vi;
+    descriptor: J
+    flags: ACC_VOLATILE
+
+  public design_mode.com.gupao.VolatileDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: lconst_0
+         6: putfield      #2                  // Field vi:J
+         9: return
+      LineNumberTable:
+        line 11: 0
+        line 12: 4
+
+  public void set(int);
+    descriptor: (I)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: iload_1
+         2: i2l
+         3: putfield      #2                  // Field vi:J
+         6: return
+      LineNumberTable:
+        line 14: 0
+        line 15: 6
+
+  public long get();
+    descriptor: ()J
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #2                  // Field vi:J
+         4: lreturn
+      LineNumberTable:
+        line 17: 0
+
+  public void getAndIncrement();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=5, locals=1, args_size=1
+         0: aload_0
+         1: dup
+         2: getfield      #2                  // Field vi:J
+         5: lconst_1
+         6: ladd
+         7: putfield      #2                  // Field vi:J
+        10: return
+      LineNumberTable:
+        line 20: 0
+        line 21: 10
+}
+SourceFile: "VolatileDemo.java"
